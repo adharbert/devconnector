@@ -1,7 +1,7 @@
 import React from 'react'
 import spinner from './spinner.gif';
 
-export default () => {
+export default function Spinner() {
   return (
     <div>
       <img 
