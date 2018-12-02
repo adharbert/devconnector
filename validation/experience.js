@@ -11,7 +11,6 @@ module.exports = function validateExperienceInput(data) {
     data.company = !isEmpty(data.company) ? data.company : '';
     data.from = !isEmpty(data.from) ? data.from : '';
     
-    
     // Any item that is null or incorrect should be added to errors.
     if (validator.isEmpty(data.title)) {
         errors.title = 'Job title field is required';

@@ -9,7 +9,6 @@ import SelectListGroup from '../common/SelectListGroup';
 import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 
 import isEmpty from '../../validation/is-empty';
-import ProfileActions from '../dashboard/ProfileActions';
 
 class EditProfile extends Component {
     constructor(props) {
