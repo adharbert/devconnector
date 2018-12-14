@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import Moment from 'react-moment';
 
 const ProfileCreds = (props) => {      
 
+    // get props
     const { education, experience } = props;
 
+    // experience items
     const expItems = experience.map(exp => (
         <li key={exp._id} className="list-group-item">
             <h4>{exp.company}</h4>
@@ -19,6 +20,7 @@ const ProfileCreds = (props) => {
         </li>
     ));
 
+    // education items
     const eduItems = education.map(edu => (
         <li key={edu._id} className="list-group-item">
             <h4>{edu.school}</h4>
@@ -31,6 +33,10 @@ const ProfileCreds = (props) => {
             <p>{edu.descbription === '' ? null : (<span><strong>Description:</strong> {edu.descbription}</span>)}</p>
         </li>
     ));
+
+
+
+
 
     return (
         <div className="row">
@@ -55,8 +61,5 @@ const ProfileCreds = (props) => {
     )
 }
 
-ProfileCreds.propTypes = {
-
-}
 
 export default ProfileCreds;
