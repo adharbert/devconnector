@@ -128,6 +128,24 @@ export const getProfileByHandle = (handle) => dispatch => {
 
 
 
+// Get Profile by User Id
+export const getProfileByUserId = (userid) => dispatch => {
+    dispatch(setProfileLoading())
+    axios.get(`/api/profile/user/${userid}`)
+         .then(res => 
+            dispatch({
+                type: GET_PROFILE,
+                payload: res.data
+            })
+        )
+        .catch(err => 
+            dispatch({
+                type: GET_PROFILE,
+                payload: null
+            })
+        )
+}
+
 
 
 // Delete account & profile
