@@ -19,6 +19,8 @@ const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 
+// configure app
+const app = express();
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -45,8 +47,6 @@ if(process.env.NODE_ENV === 'production') {
     })
 }
 
-// configure app
-const app = express();
 
 
 const port = process.env.PORT || 5000;
