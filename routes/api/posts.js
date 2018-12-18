@@ -5,9 +5,8 @@ const passport = require('passport');
 // Validation
 const validatePostInput = require('../../validation/post');
 
-
-const Post = require('../../models/Post');
 const Profile = require('../../models/Profile');
+const Post = require('../../models/Post');
 
 
 //==============================================
