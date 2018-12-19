@@ -19,7 +19,7 @@ const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
-  .connect(db)
+  .connect(db, { useNewUrlParser: true })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
@@ -47,3 +47,23 @@ if (process.env.NODE_ENV === 'production') {
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+
+
+
+/*
+Database setup:
+
+module.exports = {
+    mongoURI: "mongodb://andyH:Pass123@cluster0-shard-00-00-vvydq.mongodb.net:27017,cluster0-shard-00-01-vvydq.mongodb.net:27017,cluster0-shard-00-02-vvydq.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true",
+    secretOrKey: 'secret'
+  };
+  
+module.exports = {
+    mongoURI: "mongodb://tester:tester1@ds155293.mlab.com:55293/adhdevconnector",
+    secretOrKey: 'secret'
+  };
+  
+
+
+*/
